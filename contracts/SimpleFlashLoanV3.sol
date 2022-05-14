@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: agpl-3.0
 pragma solidity ^0.8.10;
 
-import {IPoolAddressProvider} from "@aave/core-v3/contracts/interfaces/IPoolAddressesProvider.sol";
+import {IPoolAddressesProvider} from "@aave/core-v3/contracts/interfaces/IPoolAddressesProvider.sol";
 import {IPool} from "@aave/core-v3/contracts/interfaces/IPool.sol";
 import {IFlashLoanSimpleReceiver} from "@aave/core-v3/contracts/flashloan/interfaces/IFlashLoanSimpleReceiver.sol";
 
-import {IERC} from "@openzeppelin/contracts/interfaces/IERC20.sol";
+import {IERC20} from "@openzeppelin/contracts/interfaces/IERC20.sol";
 
 interface IFaucet {
     function mint(address _token, uint256 _amount) external;
@@ -38,7 +38,7 @@ contract SimpleFlashLoanV3 is FlashLoanSimpleReceiverBase {
         // Logic go here.
 
         // Approve the LendingPool contract allowance to *pull* the owed amount
-        uint256 amountOwed = amount.add(premium);
+        uint256 amountOwed = amount + premium;
         FAUCET.mint(asset, premium);
         IERC20(asset).approve(address(POOL), amountOwed);
 
