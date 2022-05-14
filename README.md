@@ -1,7 +1,34 @@
 Aave Example
 ---
 
+## Usage
+
+1. Open `.env` and then add your `PRIVATE_KEY` and `RINKEBY_URL`
+2. Deploy contract (fuji or rinkeby)
+
+```
+yarn deploy:fuji
+yarn deploy:rinkeby
+```
+
+3. Open `config.js` file and update `simpleFlash` (Deployed address)
+4. Run SimpleFlashLoan
+
+```
+yarn fl:fuji
+yarn fl:rinkeby
+```
+
+Done 👻
+
+---
+
 Getting Started - [Developer v3 Docs](https://docs.aave.com/developers/getting-started/readme)
+
+Block Explorer
+
+- [Snowtrace Fuji](https://testnet.snowtrace.io/)
+- [Etherscan Rinkeby](https://rinkeby.etherscan.io/)
 
 ## References
 

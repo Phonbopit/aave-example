@@ -1,4 +1,4 @@
-const addresses = {
+const config = {
   fuji: {
     simpleFlash: '0xB2Ce51023e3dC68e0B91Ca5C80E1E0FC9dC2bD43',
     poolProvider: '0x1775ECC8362dB6CaB0c7A9C0957cF656A5276c29',
@@ -31,4 +31,4 @@ const addresses = {
   },
 }
 
-module.exports = addresses
+module.exports = config

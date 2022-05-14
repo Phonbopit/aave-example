@@ -1,10 +1,10 @@
-const addresses = require('../addresses')
+const config = require('../config')
 
 const main = async () => {
   const { network } = hre.hardhatArguments
 
-  const faucetAddress = addresses[network]?.aaveFaucets
-  const poolAddress = addresses[network]?.poolProvider
+  const faucetAddress = config[network]?.aaveFaucets
+  const poolAddress = config[network]?.poolProvider
 
   const Contract = await hre.ethers.getContractFactory('SimpleFlashLoanV3')
   const contract = await Contract.deploy(poolAddress, faucetAddress)

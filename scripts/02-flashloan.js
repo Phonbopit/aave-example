@@ -1,15 +1,15 @@
-const addresses = require('../addresses')
+const config = require('../config')
 
 const ABI = require('../artifacts/contracts/SimpleFlashLoanV3.sol/SimpleFlashLoanV3.json')
 
 const main = async () => {
   const { network } = hre.hardhatArguments
 
-  const deployedAddress = addresses[network]?.simpleFlash
+  const deployedAddress = config[network]?.simpleFlash
   const contract = await hre.ethers.getContractAt(ABI.abi, deployedAddress)
 
   // 10,000 USDC
-  const usdc = addresses[network]?.tokens.usdc
+  const usdc = config[network]?.tokens.usdc
   const amount = hre.ethers.utils.parseUnits('10000', usdc.decimals)
 
   const tx = await contract.executeFlashLoan(usdc.address, amount)
