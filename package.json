@@ -5,12 +5,23 @@
   "repository": "git@github.com:Phonbopit/aave-example.git",
   "author": "Chai Phonbopit <phonbopit@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "deploy:fuji": "npx hardhat run scripts/01-deploy.js --network fuji",
+    "deploy:rinkeby": "npx hardhat run scripts/01-deploy.js --network rinkeby",
+    "fl:fuji": "npx hardhat run scripts/02-flashloan.js --network fuji",
+    "fl:rinkeby": "npx hardhat run scripts/02-flashloan.js --network rinkeby"
+  },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.0",
     "@nomiclabs/hardhat-waffle": "^2.0.0",
     "chai": "^4.2.0",
+    "dotenv": "16.0.1",
     "ethereum-waffle": "^3.0.0",
     "ethers": "^5.0.0",
     "hardhat": "2.9.5"
+  },
+  "dependencies": {
+    "@aave/core-v3": "1.13.1",
+    "@openzeppelin/contracts": "4.6.0"
   }
 }
