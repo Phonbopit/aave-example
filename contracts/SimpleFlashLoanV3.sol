@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: agpl-3.0
 pragma solidity ^0.8.10;
 
 import {IPoolAddressProvider} from "@aave/core-v3/contracts/interfaces/IPoolAddressesProvider.sol";
