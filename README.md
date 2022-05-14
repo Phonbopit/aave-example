@@ -5,6 +5,10 @@ Getting Started - [Developer v3 Docs](https://docs.aave.com/developers/getting-s
 
 ## References
 
+Hackmoney - Aave
+- [Youtube - Aave Developers Guide to the Aave Protocol]](https://github.com/defispartan/hackmoney-demo)
+- [Source Code](https://github.com/defispartan/hackmoney-demo)
+
 Aave v3 Smart Contract
 
 - [@aave/core-v3](https://github.com/aave/aave-v3-core)
