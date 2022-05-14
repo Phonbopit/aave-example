@@ -33,7 +33,7 @@ Block Explorer
 ## References
 
 Hackmoney - Aave
-- [Youtube - Aave Developers Guide to the Aave Protocol]](https://github.com/defispartan/hackmoney-demo)
+- [Youtube - Aave Developers Guide to the Aave Protocol](https://github.com/defispartan/hackmoney-demo)
 - [Source Code](https://github.com/defispartan/hackmoney-demo)
 
 Aave v3 Smart Contract
